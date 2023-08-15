@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <article>
+    <section class="calculador">
+      <!-- DINERO -->
+      <div class="dinero">
+        <label for="number">BILL</label>
+        <input type="text" name="number" id="number" placeholder="Cuenta">
+      </div>
+      <!-- PROPINAS -->
+      <div class="propina">
+        <label>Select Tip %</label>
+        <div class="tips">
+          <input type="button" value="5%">
+          <input type="button" value="10%">
+          <input type="button" value="15%">
+          <input type="button" value="25%">
+          <input type="button" value="50%">
+          <input type="text" placeholder="Custom" id="propina-custom">
+        </div>
+      </div>
+      <!-- PERSONAS -->
+      <div class="person">
+        <div class="personas-wrap">
+          <label for="people">Number of People</label>
+          <p id="zero">Can't be zero</p>
+        </div>
+        <input type="text" name="people" id="people" placeholder="Personas">
+      </div>
+    </section>
+    
+    <section class="pago">
+      <section class="amount">
+        <P>Tip Amount <br>
+          <span class="letra-pequena">/ person</span></P>
+        <p class="money" id="amount">0.00</p>
+      </section>
+      
+      <section class="total">
+        <P>Total <br>
+        <span class="letra-pequena">/ person</span></P>
+        <p class="money" id="amount-total">0.00</p>
+      </section>
+
+      <button id="reset" class="reset">RESET</button>
+    
+    </section>
+    
+  </article>
+
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Miguel Piñán</a>.
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

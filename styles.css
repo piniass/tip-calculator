@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+}
+.calculador{
+    width: 50%;
+}
+.pago{
+    width: 50%;
+    margin-left: 1.5rem;
+}
+article{
+    background-color: white;
+    border-radius: 20px;
+    width: 600px;
+    padding: 1.5rem;
+    display: flex;
+}
+
+.dinero, .person,.propina{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+}
+
+input,button{
+    font-family: 'Space Mono', monospace;
+
+}
+
+.dinero input, .person input{
+    border-radius: 5px;
+
+    padding: 5px 10px;
+    margin-top: 5px;
+    text-align: right;
+    background-color: hsl(189, 41%, 97%);
+    border: 1px solid hsl(172, 67%, 45%);
+}
+
+.dinero input:focus, .person input:focus{
+    border: 3px solid hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.propina{
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+
+.dinero label, .propina label,.person label{
+    font-size: 15px;
+}
+
+.tips{
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: auto auto auto;
+}
+
+
+
+.tips input{
+    width: 90px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tips input[type="button"]{ 
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+    
+}
+
+.tips input[type="button"]:hover{ 
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.tips input[type="text"]{ 
+    border:1px solid hsl(183, 100%, 15%);
+    text-align: center;
+}
+
+.pago {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: hsl(183, 100%, 15%);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.reset {
+    border: none;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.reset:hover {
+    background-color:hsl(185, 41%, 84%);
+}
+
+.amount, .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.personas-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#zero {
+    color: red;
+    display: none;
+}
+
+.money {
+    color:  hsl(172, 67%, 45%);
+    font-size: 1.5rem;
+}
+
+.letra-pequena  {
+    color: hsl(184, 14%, 56%);
+    font-size: 0.7rem;
+}
+
+input[type="text"]:focus{
+    border-color: hsl(172, 67%, 45%);
+    outline: none;
+}
+.attribution {
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 425px){
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+    }
+    .calculador{
+        width: 100%;
+        height: 70%;
+        padding-bottom: 1rem;
+
+    }
+
+    .tips{
+        display: grid;
+        column-gap: 10px;
+        row-gap: 10px;
+        grid-template-columns:auto auto;
+    }
+
+    .tips input{
+        width: 170px;
+    }
+
+    .pago{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .amount,.total,.reset{
+        margin: 10px;
+    }
+    .attribution {
+        margin-top: 0.5rem;
+    }
+}
